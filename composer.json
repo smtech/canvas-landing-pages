@@ -1,0 +1,15 @@
+{
+    "name": "smtech/canvas-landing-pages",
+    "description": "Landing pages for links leaving our Canvas Iinstance",
+    "require": {
+        "smtech/stmarkssmarty": "dev-master"
+    },
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Seth Battis",
+            "email": "sethbattis@stmarksschool.org"
+        }
+    ],
+    "minimum-stability": "dev"
+}
