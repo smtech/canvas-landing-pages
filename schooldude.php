@@ -2,11 +2,13 @@
 
 require_once('common.inc.php');
 
-if (isset($_COOKIE['visited-once'])) {
-	header('Location: http://www.myschoolbuilding.com/myschoolbuilding/msbdefault_email.asp?frompage=myrequest.asp');
-	exit;
-} else {
-	setcookie('visited-once');
+if (empty($_REQUEST['no_cookie'])) {
+	if (isset($_COOKIE['visited-once'])) {
+		header('Location: http://www.myschoolbuilding.com/myschoolbuilding/msbdefault_email.asp?frompage=myrequest.asp');
+		exit;
+	} else {
+		setcookie('visited-once');
+	}
 }
 
 $smarty->assign('content', '
