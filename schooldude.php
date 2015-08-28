@@ -12,9 +12,19 @@ if (empty($_REQUEST['no_cookie'])) {
 }
 
 $smarty->assign('content', '
-	<p>When you arrive at School Dude</a> for the first time, you will be asked to enter our organization account number:
-	<blockquote><code style="font-size:.5in;">615666807</code></blockquote>
-	<p>Please make a note (or copy-and-paste) this number and then <a href="http://www.myschoolbuilding.com/myschoolbuilding/msbdefault_email.asp?frompage=myrequest.asp">click this link to continue.</a> (And recall that the password to submit a School Dude ticket is our founder&rsquo;s initials and our founding year.)</p>
+	<div class="container page-header">
+		<h1>School Dude <small>Facilities Requests</small></h1>
+	</div>
+
+	<div class="container">
+		<div class="readable-width">
+			<p>When you arrive at School Dude</a> for the first time, you will be asked to enter our organization account number:
+			<p style="text-align: center;"><code style="font-size:.5in;">' . (string) $secrets->schooldude->account . '</code></p>
+			<p>Please make a note (or copy-and-paste) this number and then click below to continue. (And recall that the password to submit a School Dude ticket is our founder&rsquo;s initials and our founding year: <code>' . (string) $secrets->schooldude->password . '</code>)</p>
+			<p style="text-align: center;"><a class="btn btn-lg btn-primary" href="http://www.myschoolbuilding.com/myschoolbuilding/msbdefault_email.asp?frompage=myrequest.asp">Continue to School Dude</a></p>
+		</div>
+	</div>
+	
 ');
 
 $smarty->display();

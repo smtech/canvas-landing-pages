@@ -20,4 +20,6 @@ Thumbs.db
 # Merge files #
 ###############
 *.orig
+
 /vendor/
+secrets.xml
